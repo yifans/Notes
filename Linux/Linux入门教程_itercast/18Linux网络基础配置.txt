@@ -1,0 +1,60 @@
+18.Linux网络配置基础
+	18.1 以太网连接
+		在Linux中，以太网接口被命令为：eth0,eth1，等0、1代表网卡编号
+		通过lspci命令可以查看网卡硬件信息
+			（如果是usb网卡、则可能需要使用lsusb命令）
+		命令ifconfig命令用来查看接口信息
+			ifconfig -a 	查看所有接口
+			ifconfig -eth0 	查看特定接口
+		命令ifup,ifdown用来启用、禁用一个接口
+			ifup eth0
+			ifdown eth0
+	18.2 配置网络信息
+		使用setup命令可以配置网络信息（还可设置其他信息键盘、防火墙等）
+			字符界面中的图形化操作，静态手工配置网络
+		配置完成后，使用ifup启用网卡，并使用ifconfig命令查看信息
+	18.3 网络相关配置文件
+		网卡的配置信息保存在下面目录中：
+			/etc/sysconfig/network-scripts/...
+			配置文件为ifcfg-网卡名称：ifcfg-eth0
+		DNS服务器IP保存在：
+			/etc/resolv.conf      resolv是“解析”的意思
+		主机名配置保存在：
+			/etc/sysconfig/network
+			hostname命令：可以查看主机名
+		静态主机名配置文件
+			/etc/hosts
+	18.4 网络测试命令
+		测试网络连通性：
+			ping 192.168.1.1
+			ping www.linuxcast.net
+		测试DNS解析：
+			host www.linuxcast.net 	（简单）
+			dig  www.linuxcast.net 	（复杂、更加专业）
+		显示路由表
+			ip route
+		追踪到达目标地址的网络路径
+			traceroute www.linuxcast.net
+		网络质量测试（结合了traceroute和ping）
+			mtr www.linuxcast.net
+			(mtr表示my traceroute)
+	18.5 修改主机名
+		实时修改主机名：
+			hostname train.linuxcast.net
+		永久性修改主机名：
+			只能通过修改配置文件：/etc/sysconfig/network
+			HOSTNAME=training.linux.net
+	18.6 故障排查
+		网络故障排查遵循从上至下、从里至外的原则
+		（从底层到高层、从自身到外部的流程）
+		先查看网络配置信息是否正确
+			IP地址
+			子网掩码
+			网关
+			DNS
+		查看到达网关是否连通
+			ping 网关IP地址
+		查看DNS解析是否正常（多试几个网站，可能是对方服务器挂掉了）
+			host www.linux.net
+			host www.126.com
+			host www.douban.com

@@ -1,0 +1,85 @@
+23.YUM软件管理
+	23.1 YUM
+		rpm无法自动解决软件的依赖关系
+		YUM（Yellow	DogUpdater，Modified）
+		是一个RPM的前段程序，主要用来自动解决rpm依赖关系。
+
+		其特点如下：
+			自动解决依赖关系
+			可以对rpm进行分组，并基于组进行安装操作
+			使用仓库管理rpm文件，支持多个仓库
+			配置简单
+	23.2 YUM仓库
+		YUM引入仓库（repo）概念，仓库用来存放管理rpm软件包，当软件存在依赖关系时，自动从仓库中寻找软件解决以来关系
+
+		仓库可以使本地的，也可以是使用HTTP、FTP、NFS协议的集中的、统一的网络仓库
+
+		YUM仓库的配置文件保存在/etc/yum.repos.d目录下，
+			----------------------------------------------------------
+			格式如下 ：
+				[Linuxcast]
+				name = This is LinuxCast.net rpm soft repo
+				baseurl = http://www.linuxcast.net/yum/centos/6/i386/rpms
+				enabled = 1
+				gpgcheck = 1 
+			----------------------------------------------------------
+			分别指：
+				仓库名称
+				名字，只是一个名字，随便写，给管理员自己看
+				仓库基础路径：可为互联网仓库，或者为本地文件夹
+				是否启用：1代表启用 0代表禁用（只是配置）,默认开启
+				是否打开校验，一般打开（尤其生产环节）
+			----------------------------------------------------------
+
+			仓库可以使用file,http,ftp,nfs方式
+			配置文件必须以.repo结尾
+			一个配置文件内可以保存多个仓库的配置信息
+			/etc/yum.repos.d目录下可以存在多个配置文件
+	23.2 YUM常用命令：
+		安装软件：
+			yum install software-name
+		删除软件：
+			yum remove software-name
+		升级软件：
+			yum update software-name
+	23.3 YUM查询
+		搜索
+			yum search 关键字
+		列出全部、安装的、最新的、软件更新
+			yum list (all | installed | recent | updates)
+		显示指定软件的信息：
+			yum info packagename (与rpm -qi相同)
+		查询哪个rpm软件包含目标文件
+			yum whoprovides filename
+	23.4 创建YUM仓库
+		手工创建YUM仓库步骤
+			a 将所有rpm文件拷到一个文件夹中
+			b 通过rpm命令手工安装createrepo软件
+				rpm -ivh createrepo........
+			c 运行命令createrepo -v /rpm-directory，创建索引信息
+				-v 显示详细信息
+				创建好之后会有一个repodata文件夹，内部为索引文件
+			d 如果有分组信息，则在运行命令的时候使用-g参数指定分组文件
+				createrepo -g /tmp/*comps.xml /rpm-directory （以comps.xml结尾）
+				CentOS/RHEL的分组信息保存在光盘repodata/目录下，文件名以comps.xml结尾的xml文件
+
+		创建好之后，本机可以通过file方式直接使用，
+		如果需要作为对外的YUM仓库服务器，可以通过HTTP,FTP,NFS协议共享出去。
+
+		仓库创建好之后，在配置文件中添加一个配置文件
+			在/etc/yum.repos.d下新建一个文件，如linuxcast.repo
+				vim linuxcast.repo
+			插入以下内容
+			-----------------------------------------------------------
+			[LinuxCast]
+			name = LinuxCast.net Yum repo
+			baseurl = file:///linuxcast-yum/      (file是指本地文件协议)
+			enabled = 1
+			gpgcheck = 0
+			-----------------------------------------------------------
+	23.5 YUM CACHE
+		yum为了提高速度，会缓存很多信息，但是有时缓存会造成一定的故障，
+		清除缓存
+			yum clean all
+		每次运行安装或查询命令会重建yum缓存
+

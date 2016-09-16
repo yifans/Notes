@@ -1,0 +1,68 @@
+22.RPM软件包管理
+	22.1 源代码形式
+		绝大多数开源软件都是以源代码形式发布。
+		源代码一般会被打包为tar.gz的归档压缩文件
+		程序源代码需要编译成为二进制形式之后才能够运行使用
+
+		源代码基本编译流程
+			./configure    检查编译环境、相关库文件以及配置参数并生成makefile
+			make           将源代码编译为可执行文件
+			make install   安装编译好的可执行文件
+
+		源代码形式的软件使用起来较为麻烦，但是兼容性和可控制性比较好
+		开源软件一般都会大量使用其他软件的功能，所以开源软件会有大量的依赖关系（使用某软件需要先安装其他软件）
+
+	22.2 RPM
+		源代码形式的缺点：操作复杂，编译时间较长，极容易出现错误
+		源代码形式的优点：适用所有系统，可定制
+		为了方便使用，开发了RPM（redhat Package Manager）
+		RPM通过将源代码基于特定平台系统编译为可执行文件，并保存依赖关系，来简化开源软件的安装管理。
+
+		RPM的设计目标如下
+			使用简单
+			使用单一软件包格式文件发布（.rpm文件）
+			可升级
+			追踪软件依赖关系
+			基本信息查询
+			软件验证功能
+			支持多平台		
+
+		RPM软件包常用命名规范
+			linuxcast-1.2.0-30.el6.i686.rpm
+			--------- -------- --------
+			软件名称  版本号    支持平台
+
+	22.3 RPM基础命令（需要root权限）：
+			安装软件：
+				rpm -i linuxcast-soft.rpm
+			卸载软件：
+				rpm -e linuxcast-soft  (只跟程序的名字，不写.rpm)
+			升级形式安装：
+				rpm -U linuxcast-soft-new.rpm
+
+			rpm支持通过http、ftp协议安装软件
+				rpm -ivh http://www.linuxcast.net/software.rpm
+			
+			常用参数：
+				-v  显示详细信息
+				-h  显示文本进度条
+
+	22.4 RPM查询
+		RPM常用查询命令：
+			rpm -qa   					列出所有已安装的rpm软件
+			rpm -qf filename  			查询指定文件属于哪个rpm包
+			rpm -qi packagename  		查询指定已安装软件包的信息（information）
+			rpm -ql packagename  		查询指定已安装软件包包含的文件
+			rpm -qip software.rpm 		查询未安装rpm文件的信息
+			rpm -qlp software.rpm  		查询未安装rpm文件包含的文件
+			
+	22.5 RPM验证
+		软件在传播过程中可能被恶意修改，所以为了安全起见现代系统都加入了对软件的验证功能。
+		验证一般使用非对称加密算法，所以需要一个密钥
+
+		导入密钥
+		rpm --import RPM-GPG-KEY-CentOS-6
+		验证rpm文件
+			rpm -K software.rpm
+		验证已安装的软件
+			rpm -V softname

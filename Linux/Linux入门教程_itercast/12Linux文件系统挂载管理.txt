@@ -1,0 +1,40 @@
+12.Linux文件系统挂载管理
+	12.1 挂载操作
+		文件系统创建好之后需要挂载到系统中方可使用，
+		windows、Mac系统会自动挂载文件系统
+		Linux下一般需要手工挂载或者配置系统自动挂载
+
+	12.2 mount
+		命令mount：将格式化好的磁盘或分区挂载到一个目录上
+		mount 要挂载的设备   挂载点
+		mount /dev/sdb1    /mnt
+
+		常用参数
+		不带参数的mount命令会显示所有已经挂载的文件系统
+		-t  指定文件系统的类型，如： -t ext3、-t vfat  
+		-o  指定挂载选项：
+			ro,rw    只读挂载或读写挂载
+			sync     不使用文件缓存，所有操作直接写入
+			async    使用缓存提高文件系统读写，默认是async
+			noatime  每次访问文件时不更新文件的访问时间
+			atime    每次访问文件时更新文件的访问时间
+			remount  重新挂载
+	12.3 umount
+		命令umount用以卸载一个挂载的文件系统，相当于Windows的弹出
+		umount 挂载源或挂载点
+		umount /dev/sdb1 == umount /mnt
+
+		如果出现device is busy报错，表示该文件系统正在被使用，无法卸载
+		fuser命令：查看使用文件系统的进程
+			fuser -m /mnt
+		lsof命令：查看正在被使用的文件
+			lsof /mnt
+	12.4 自动挂载
+		配置/etc/fstab用来定义需要自动挂载的文件系统
+		fstab中每一行代表一个挂载配置，格式为
+
+		需要挂载的设备	挂载点 	文件系统 	挂载选项 	dump、fsck相关选项
+		/dev/sda3		/mmt 	ext4 		defaults 	0 0
+
+		若要挂载的设备有LABEL，使用LABEL=LINUXCAST取代/dev/sda3\
+		mount -a 命令会挂载所有fstab中定义的自动挂载项

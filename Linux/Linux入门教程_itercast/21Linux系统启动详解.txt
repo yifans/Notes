@@ -1,0 +1,45 @@
+Linux系统启动流程如下：
+
+BIOS
+MBR
+GRUB
+加载内核
+init
+runlevel
+Linux内核文件保存在:
+
+/boot/vmlinuz    内核文件
+
+/boot/initramfs   内核模块
+
+命令dmesg显示本次内核启动信息
+
+init是系统运行的第一个进程
+
+Linux运行级别：
+
+0   关机
+
+1   单用户模式
+
+2   不带网络的多用户模式
+
+3   命令行多用户模式 
+
+4   未使用
+
+5   X11图形界面模式
+
+6   重启
+
+运行级别保存在配置文件：
+
+/etc/inittab
+
+命令runlevel显示当前及上一个运行级别
+
+命令init可修改当前运行级别
+
+init 3
+
+单用户模式下可恢复root密码

@@ -1,0 +1,77 @@
+20.Linux命令行文本处理工具
+文本处理
+	20.1 文件浏览
+		cat		查看文件内容
+		more	以翻页形式查看文件内容（只能向下翻页）
+		less	以翻页形式查看文件内容（可上下翻页）
+		head	查看文件的开始10行（或指定行数）
+		tail	查看文件的结束10行（或指定行数）
+	20.2 grep 
+		基于关键字搜索搜索
+			grep  关键字  指定文件
+			例如：grep 'linuxcast' /etc/passwd
+				  find / -user linuxcast 2> /dev/null | grep Video
+			参数
+			-i  搜索时忽略大小写
+			-n  显示结果所在行
+			-v  显示不包含关键字的行（排除、取反操作）
+			-Ax 在输出的时候包含结果所在行之后的制定行数（after）
+			-Bx 在输出的时候包含结果所在行之前的制定行数（before）
+	20.3 cut
+		基于列的文本处理：
+			cut -d: -f1 /etc/passwd
+			-d  指定分割字符（默认是TAB）
+			-f  指定显示列
+			-c  基于字符顺序进行列分割
+				例：cut -c2-6 /etc/passwd
+	20.4 wc
+		文本统计（word count）
+			wc linuxcast
+		参数
+			-l  只统计行数
+			-w  只统计单词数
+			-c  只统计字节数
+			-m  只统计字符数 
+	20.5 sort
+		文本排序：
+			sort linuxcast
+		参数
+			-r   倒序排序
+			-n   基于数字进行排序
+			-f   忽略大小写
+			-u   删除重复行
+			-t c 使用c作为分隔符分割为列进行排序
+			-k x 当进行基于指定字符分割为列的排序时，指定基于那个列排序
+	20.6 删除重复行
+		sort -u		可以用以删除重复行
+		uniq命令	用以删除重复的相邻行
+			cat linuxcast | uniq
+	20.7 diff
+		文本比较
+			diff linuxcast-1 linuxcast-2
+		参数：
+			-i  忽略大小写
+			-b  忽略空格数变化
+			-u  统一显示比较信息（一般用于生成patch文件，即补丁文件）
+				diff -u linuxcast-1 linuxcast-2 > final.patch
+	20.8 aspell
+		用以显示检查英文拼写
+		aspell check linuxcast
+		aspell list < linuxcast
+	20.9 tr
+		处理文本内容
+		删除指定关键字
+			tr -d 'TMD' < linuxcast     
+		转换大小写
+			tr 'a-z' 'A-Z' < linuxcast 
+	20.10 sed
+		使用正则表达式处理文件
+		搜索替换：
+			sed 's/linux/unix/g' linuxcast   
+					将所有linux关键字替换为unix
+			sed '1,50s/linux/unix/g' linuxcast 
+					处理 1-50行
+			sed -e '1,50s/linux/unix/g' -e 's/mesh/mesh_su/g' linuxcast 
+					-e表示多个参数
+			sed -f sededit linuxcast
+					将搜索的内容（即''中的内容）写入sededit中，避免每次都输入 
