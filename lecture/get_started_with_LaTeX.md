@@ -1,19 +1,35 @@
-#
+# TeX 环境搭建
 
-1. 下载镜像文件
-
-在科大，可以直接使用学校的开源镜像：
+## 下载发行版镜像
+- 选择 `Texlive`, 不要选择长时间为更新的 `CTeX` 套装
+- 下载地址，在科大，可以直接使用学校的开源镜像：
 http://mirrors.ustc.edu.cn/CTAN/systems/texlive/Images/texlive2015-20150523.iso
 
-2. 安装
+##　安装步骤
 
-Windows环境参考：http://zhuanlan.zhihu.com/LaTeX/19779481
-Linux环境参考http://zhuanlan.zhihu.com/LaTeX/20069414
+### 安装　`TeXlive`
+- Windows环境参考：http://zhuanlan.zhihu.com/LaTeX/19779481
 
-修正：
-安装教程中提示将「After installation, get package updates from CTAN」选择为「否」。这是作者对此的误读，请选择为「是」。其意义是将 tlmgr 的 repository 选项设置为 http://mirror.ctan.org/systems/texlive/tlnet。若选择否，则 tlmgr 的 repository 选项设置为 iso 镜像的挂载位置。这个选项打开之后，并不会在 iso 安装完成之后立即联网更新宏包。
+- Linux环境参考:
+  * http://zhuanlan.zhihu.com/LaTeX/20069414
+  * http://www.latexstudio.net/archives/8806
 
-3. 安装一个编辑器
+### 安装一个编辑器
 
-我安装的是TeXstudio：http://texstudio.sourceforge.net/
+可以安装的`TeXstudio`：http://texstudio.sourceforge.net/
 修改默认编译方式：Options -> Configure Texstudio -> Build -> Default 修改为XeLaTeX
+
+## 学习使用
+### 实体书推荐
+- `LaTeX入门` 作者: 刘海洋 ISBN: 9787121202087
+
+### 视频教程
+- ChinaTex 旧视频教程：http://www.chinatex.org/?page_id=218
+  这一教程使用`CTeX`套装讲解，可以作为入门
+- ChinaTex 新视频教程, 需要购买 https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-3473795048.2.y81q5C&id=43823508044
+
+### 网站
+- LaTeX开源小屋 http://www.latexstudio.net/
+
+### 配套文档
+- 使用`texdoc` 命令查看系统文档，如查看`ctex宏包`文档：`texdoc ctex`
