@@ -5,6 +5,11 @@
 iconv -f gbk -t utf8 shujujiegou.txt > shujujiegou.txt.utf8
 ```
 
+- 将 svg 图片转为 eps，可以使用inkscape的命令行
+```
+inkscape in.svg -E out.eps --export-ps-level=3
+```
+- 讲默认系统的 `bash` 换位 `zsh`,可以参考：终极 Shell——ZSH：https://zhuanlan.zhihu.com/p/19556676?columnSlug=mactalk
 # 软件
 - 录屏软件：`kazam`
 - 快捷启动软件：`Mutate`
