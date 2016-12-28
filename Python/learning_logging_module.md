@@ -66,6 +66,75 @@ logging库提供了多个组件：Logger、Handler、Filter、Formatter。
 - Handler发送日志到适当的目的地
 - Filter提供了过滤日志信息的方法
 - Formatter指定日志显示格式。
+- 示例
+
+```Python
+#coding:utf-8  
+import logging  
+
+# 创建一个logger    
+logger = logging.getLogger()  
+
+logger1 = logging.getLogger('mylogger')  
+logger1.setLevel(logging.DEBUG)  
+
+logger2 = logging.getLogger('mylogger')  
+logger2.setLevel(logging.INFO)  
+
+logger3 = logging.getLogger('mylogger.child1')  
+logger3.setLevel(logging.WARNING)  
+
+logger4 = logging.getLogger('mylogger.child1.child2')  
+logger4.setLevel(logging.DEBUG)  
+
+logger5 = logging.getLogger('mylogger.child1.child2.child3')  
+logger5.setLevel(logging.DEBUG)  
+
+# 创建一个handler，用于写入日志文件    
+fh = logging.FileHandler('/tmp/test.log')  
+
+# 再创建一个handler，用于输出到控制台    
+ch = logging.StreamHandler()  
+
+# 定义handler的输出格式formatter    
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')  
+fh.setFormatter(formatter)  
+ch.setFormatter(formatter)  
+
+#定义一个filter  
+#filter = logging.Filter('mylogger.child1.child2')  
+#fh.addFilter(filter)    
+
+# 给logger添加handler    
+#logger.addFilter(filter)  
+logger.addHandler(fh)  
+logger.addHandler(ch)  
+
+#logger1.addFilter(filter)  
+logger1.addHandler(fh)  
+logger1.addHandler(ch)  
+
+logger2.addHandler(fh)  
+logger2.addHandler(ch)  
+
+#logger3.addFilter(filter)  
+logger3.addHandler(fh)  
+logger3.addHandler(ch)  
+
+#logger4.addFilter(filter)  
+logger4.addHandler(fh)  
+logger4.addHandler(ch)  
+
+logger5.addHandler(fh)  
+logger5.addHandler(ch)  
+
+# 记录一条日志    
+logger.debug('logger debug message')  
+logger.info('logger info message')  
+logger.warning('logger warning message')  
+logger.error('logger error message')  
+logger.critical('logger critical message')  
+```
 
 ### Logger
 
