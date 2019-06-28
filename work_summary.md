@@ -206,7 +206,6 @@
   - 在线写作：https://www.overleaf.com/
 - 画图
   - Visio，科大正版软件网站可以下载到
-  - google drawing， 在线画图
   - Mac平台上可以使用 omnigraffle
   - 谷歌绘图：https://docs.google.com/drawings
   - Draw.io https://www.draw.io/
@@ -221,6 +220,10 @@
 - 中国科大网络资源一览：https://github.com/zzh1996/USTC-Network-Resources
   * 本链接值得详细看，认真看，仔细参考
   * 正版软件，可以下载windows、office、matlab等：ms.ustc.edu.cn
+- 科大共有三个健身房
+  * 西区：较小
+  * 东活四楼：比较大，人多
+  * 东区体育教室，在操场西侧
 
 
 
