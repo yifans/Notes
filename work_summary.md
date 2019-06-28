@@ -153,10 +153,12 @@
   - 做上层应用开发，需要接口：看Extensions
   - 遇到问题：找tech-talk的历史邮件或直接提问
   - 找课题灵感：看Collaboration Meetings
+
 - EPICS Application Developer's Guide
   - EPICS Bible
   - 通读比较费劲，可挑选重要章节阅读
   - 以下对我熟悉的章节做一介绍
+  
 	    - 1 Introduction 全书介绍和致谢
 	    - 2 Getting Started 起步，主要是对example ioc的介绍
 	    - 3 EPICS Overview EPICS基本概念，看training ppt更为直观
