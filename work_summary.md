@@ -145,6 +145,19 @@
   - 做上层应用开发，需要接口：看Extensions
   - 遇到问题：找tech-talk的历史邮件或直接提问
   - 找课题灵感：看Collaboration Meetings
+- EPICS V4资料
+  - 由于epics7还在开发中，这部分资料比较杂乱，不成系统，主要可以参考的资料包括
+  - EPICS V4 Developer's Guide：http://epics-pvdata.sourceforge.net/informative/developerGuide/developerGuide.html
+  - pvAccess Protocol Specification，http://epics-pvdata.sourceforge.net/pvAccess_Protocol_Specification.html，pvAccess协议细节
+  - EPICSv4 Overview and Architectures，http://epics-pvdata.sourceforge.net/arch.html，EPICS V4的软件结构等
+  - EPICS V4 Normative Types，http://epics-pvdata.sourceforge.net/alpha/normativeTypes/normativeTypes.html
+  - 各个模块的API文档：http://epics-pvdata.sourceforge.net/literature.html#swdoc（有C++和Java两种）
+  - 可以参考我毕业论文第二章内容
+
+  
+
+- 其它资料
+  - 
 
 ## 找文献
 - jacow：加速器各个会议文章汇总：http://www.jacow.org/，也可看到将要召开的会议时间和地点
@@ -172,6 +185,17 @@
   - 原子能科学技术
   - 核电子学与探测技术
   - 强激光与粒子束
+
+## 科研工具
+- LaTeX
+  - 写文章和毕业论文必备
+  - 入门书籍《LaTeX入门》 刘海洋
+  - 下载TexLive发行版（可以从科大镜像下载：http://mirrors.ustc.edu.cn/CTAN/），配合TexStudio使用
+  - MAC用户可以使用MacTEX
+  - 找模板：http://www.latexstudio.net/
+  - 科大毕业论文模板：https://github.com/ustctug/ustcthesis
+  - jacow投稿模板：http://www.jacow.org/Authors/LaTeX
+  - 在线写作：https://www.overleaf.com/
 
 
 # 生活
