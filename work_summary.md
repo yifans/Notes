@@ -5,12 +5,12 @@
 
 # 学习
 ## Linux学习
-- Linux是本组学习和科研的基本工具，必须掌握
-- 实验室服务器均为CentOS7系统，学习也以CentOS7为重
+- Linux是本组学习和科研的基本工具
+- 实验室服务器均为CentOS7系统，学习应以CentOS7为重
 - 个人计算机可以使用Ubuntu
 
 ### 入门
-- 《快乐的Linux命令行》：本书更适合作为Linux入门学习
+- 《快乐的Linux命令行》：本书适合作为Linux入门学习
 - 《鸟哥的Linux私房菜》：
   - 本书较厚，可以用作参考手册，有时间可以通读
   - 上册为基本操作，下册为服务器搭建指南
@@ -21,8 +21,10 @@
 
 ### 其它
 - 科大LUG协会：https://lug.ustc.edu.cn/wiki/
-- 科大镜像：可以下载各种Linux发行版的镜像文件
-  - mirrors.ustc.edu.cn
+- 科大镜像：mirrors.ustc.edu.cn
+  - 可以下载各种Linux发行版的镜像文件
+  - 可以作为软件源，配置方式详见使用帮助http://mirrors.ustc.edu.cn/help/
+  - 也包括一些语言的源：如PyPi、Docker CE、Homebrew等
 
 ## 编程语言
 ### C
@@ -50,6 +52,7 @@
 
 ### Java
 - 《Java核心技术》
+- 《Effective Java》
 
 ### JavaScript
 - 廖雪峰教程：https://www.liaoxuefeng.com/wiki/1022910821149312
@@ -143,12 +146,40 @@
 - 学习途径
   - 一定在Linux上学习
   - 安装EPICS，可以参考组内安装手册
+  - 编译example ioc，读文件结构、db文件、snl文件等，可以对EPICS IOC有一直观的认识
   - 看Training上的ppt，可以先看 APS EPICS Training, 2014 中的 Introduction to EPICS来入门
   - 做ioc开发：看Record Reference Manual
-  - 做驱动开发：EPICS Application Developer's Guide
+  - 做驱动及内核开发：EPICS Application Developer's Guide
   - 做上层应用开发，需要接口：看Extensions
   - 遇到问题：找tech-talk的历史邮件或直接提问
   - 找课题灵感：看Collaboration Meetings
+- EPICS Application Developer's Guide
+  - EPICS Bible
+  - 通读比较费劲，可挑选重要章节阅读
+  - 以下对我熟悉的章节做一介绍
+	    - 1 Introduction 全书介绍和致谢
+	    - 2 Getting Started 起步，主要是对example ioc的介绍
+	    - 3 EPICS Overview EPICS基本概念，看training ppt更为直观
+	    - 4 Build Facility 文件结构、项目构建和Makefile中各变量的说明
+	    - 5 Database Locking, Scanning, And Processing EPICS中的核心概念，需通读
+	    - 6 Database Definition DB文件格式
+	    - 7 IOC Initialization IOC的启动过程
+	    - 8 Access Security 不了解
+	    - 9 IOC Test Facilities IOC Shell中可以使用的命令，如dbl、dbpr等
+	    - 10 IOC Error Logging 不了解
+	    - 11 Record Support 如何开发新的记录类型
+	    - 12 Device Support 如何开发驱动中的Device Support层
+	    - 13 Driver Support 如何开发驱动中的Driver Support层
+	    - 14 Static Database Access 访问静态的db文件的接口
+	    - 15 Runtime Database Access 访问动态的db文件的接口
+	    - 16 EPICS General Purpose Tasks 介绍EPICS中的回调和看门狗
+	    - 17 Database Scanning 介绍database scan机制
+	    - 18、19 不了解
+	    - 20 libCom OSI libraries 屏蔽了各个操作系统细节的一些系统调用接口
+	    - 21、22 不了解
+
+
+- EPICS R3.15 Channel Access Reference Manual
 - EPICS V4资料
   - 由于epics7还在开发中，这部分资料比较杂乱，不成系统，主要可以参考的资料包括
   - EPICS V4 Developer's Guide：http://epics-pvdata.sourceforge.net/informative/developerGuide/developerGuide.html
@@ -224,6 +255,13 @@
   * 西区：较小
   * 东活四楼：比较大，人多
   * 东区体育教室，在操场西侧
+- 科大附近就餐好去处
+  * 老火大骨头
+  * 庐州太太
+  * 炉桥手擀面
+  * 牛牛烧烤
+  * 华顺土菜馆
+  * 大家好土菜馆
 
 
 
