@@ -30,6 +30,10 @@
 	- 可以下载各种Linux发行版的镜像文件
 	- 可以作为软件源，配置方式详见使用帮助http://mirrors.ustc.edu.cn/help/
 	- 也包括一些语言的源：如PyPi、Docker CE、Homebrew等
+	- LUG也提供了一些好用的服务，
+		- 列表为 https://lug.ustc.edu.cn/wiki/lug/services/start
+		- 网络加速服务：https://light.ustclug.org/login/
+		- 代码托管平台：https://git.lug.ustc.edu.cn
 
 ## 编程语言
 ### C
