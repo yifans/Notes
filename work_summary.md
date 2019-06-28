@@ -18,17 +18,75 @@
   - https://github.com/yifans/Notes/tree/master/Linux/Linux_itercast
   - 这是我2013年学习时的笔记，对应的视频课程已经找不到了
   - 该笔记是基于CentOS6的，学习时注意与CentOS7区分
-- 《Linux Shell脚本攻略》https://book.douban.com/subject/6889456/
-
-### 开发
-- 《UNIX环境高级编程》
-- 《Linux程序设计 : 第4版》
-- 《Advance Bash-Scripting Guide》 Shell编程最权威的书，有开源版本
 
 ### 其它
 - 科大LUG协会：https://lug.ustc.edu.cn/wiki/
 - 科大镜像：可以下载各种Linux发行版的镜像文件
   - mirrors.ustc.edu.cn
+
+## 编程语言
+### C
+- 《c primer plus》
+- 《C程序设计语言》 K&R
+- 《UNIX环境高级编程》
+- 《Linux程序设计 : 第4版》
+
+
+### Python
+- 安装 Anaconda Python 较为方便
+#### 入门
+- 《简明Python 教程》
+- 廖雪峰教程：https://www.liaoxuefeng.com/wiki/1016959663602400
+#### 进阶
+- 《Python Cookbook》
+- 《流畅的Python》十分推荐！
+#### Python 与 EPICS
+- pyepics
+  * 官方文档：https://cars9.uchicago.edu/software/python/pyepics3/
+  * training：https://epics.anl.gov/docs/APS2014 中的 CA Programming in Python
+- pvaPy
+  * github主页：https://github.com/epics-base/pvaPy
+  * 文档：https://epics.anl.gov/extensions/pvaPy/production/index.html#
+
+### Java
+- 《Java核心技术》
+
+### JavaScript
+- 廖雪峰教程：https://www.liaoxuefeng.com/wiki/1022910821149312
+- 《JavaScript高级程序设计（第3版）》
+
+### Shell
+- 《鸟哥的Linux私房菜》
+- 《Linux Shell脚本攻略》https://book.douban.com/subject/6889456/
+- 《Advance Bash-Scripting Guide》 Shell编程最权威的书，有开源版本
+
+## 计算机基础
+### 操作系统
+- 《深入理解计算机系统》，也称为 CSAPP，
+  - 计算机科学极佳的入门书
+  - B站课程 https://github.com/EugeneLiu/translationCSAPP/blob/master/contribution.md
+  - github主页：https://github.com/EugeneLiu/translationCSAPP/blob/master/contribution.md
+- 《Operating Systems: Three Easy Pieces》很通俗易懂
+- 《现代操作系统》
+- 哈尔滨工业大学操作系统教程：https://study.163.com/series/1202806603.htm
+
+### 数据库
+- 《MySQL必知必会》
+- 《SQL必知必会》
+- 《高性能MySQL》
+
+
+### 计算机网络
+- 浙江大学 计算机网络教程 https://v.youku.com/v_show/id_XNjQxNTUwNzk2.html?spm=a2h0k.11417342.soresults.dtitle
+- 《TCP/IP详解 卷1：协议》
+
+
+## 加速器物理
+- 加速器物理学 S.Y.Lee
+- 加速器物理基础，陈佳洱，可以作为王老师加速器物理课程的资料补充
+- 同步辐射光源物理引论，刘祖平
+- 电子直线加速器设计基础，裴元吉
+ 
 
 # 科研
 ## EPICS
