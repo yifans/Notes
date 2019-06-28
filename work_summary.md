@@ -60,6 +60,10 @@
 - 《Linux Shell脚本攻略》https://book.douban.com/subject/6889456/
 - 《Advance Bash-Scripting Guide》 Shell编程最权威的书，有开源版本
 
+### 大数据相关
+- 《Hadoop权威指南》
+- 马士兵直播的大数据相关课程方便入门
+
 ## 计算机基础
 ### 操作系统
 - 《深入理解计算机系统》，也称为 CSAPP，
@@ -154,10 +158,14 @@
   - 各个模块的API文档：http://epics-pvdata.sourceforge.net/literature.html#swdoc（有C++和Java两种）
   - 可以参考我毕业论文第二章内容
 
-  
-
 - 其它资料
-  - 
+  - EPICS新版本网站：https://epics-controls.org/
+  - KEK EPICS 资料：https://www-linac.kek.jp/cont/epics/
+  - StreamDevice下载和文档：http://epics.web.psi.ch/software/streamdevice/doc/
+  - s7plc：http://epics.web.psi.ch/software/s7plc/
+  - State Notation Language (SNL) 语言：https://www-csr.bessy.de/control/SoftDist/sequencer/Tutorial.html
+  - Archiver Appliance 主页：https://slacmshankar.github.io/epicsarchiver_docs/
+  - phoebus：https://github.com/shroffk/phoebus
 
 ## 找文献
 - jacow：加速器各个会议文章汇总：http://www.jacow.org/，也可看到将要召开的会议时间和地点
@@ -196,6 +204,13 @@
   - 科大毕业论文模板：https://github.com/ustctug/ustcthesis
   - jacow投稿模板：http://www.jacow.org/Authors/LaTeX
   - 在线写作：https://www.overleaf.com/
+- 画图
+  - Visio，科大正版软件网站可以下载到
+  - google drawing， 在线画图
+  - Mac平台上可以使用 omnigraffle
+  - 谷歌绘图：https://docs.google.com/drawings
+  - Draw.io https://www.draw.io/
+  - python画图库：matplotlib
 
 
 # 生活
