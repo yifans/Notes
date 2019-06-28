@@ -195,7 +195,13 @@
 		- 21、22 不了解
 
 
-- EPICS R3.15 Channel Access Reference Manual
+- Record Reference Manual
+	- 前三个小节比较重要
+		- Database Concepts EPICS 数据库的基本概念，如scan、alarm等
+		- Fields Common to All Record Types 所有记录都有的域
+		- Fields Common to Many Record Types 大多数记录都有的域
+		- 如果文档阅读不明白，可以直接看源码，如ai记录可直接看其源码文件：aiRecord.c 
+	- 后面小节根据开发记录类型挑选阅读	
 - EPICS V4资料
   - 由于epics7还在开发中，这部分资料比较杂乱，不成系统，主要可以参考的资料包括
   - EPICS V4 Developer's Guide：http://epics-pvdata.sourceforge.net/informative/developerGuide/developerGuide.html
@@ -265,6 +271,16 @@
   - 视频教程：玩转Vim 从放弃到爱不释手 https://www.imooc.com/learn/1129
 - Git
   - 廖雪峰教程
+- RSS
+  - 可以看这一视频教程学习：https://www.coursera.org/lecture/kuaisu-xuexi/3-2-2-ru-he-shi-yong-rss-jJ7BM
+  - 推荐使用 inoreader
+  - 推荐订阅的一些资源
+  	- 阮一峰的网络日志
+  	- 开源工厂
+  	- EPICS tech talk
+  	- 少数派
+  	- wiki how
+  	- ...
 
 
 # 生活
