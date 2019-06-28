@@ -1,0 +1,133 @@
+# 控制组生存指南
+- 毕业前，将在控制组学习的各个资料做一汇总
+- 希望前人栽树，后人乘凉
+- 希望后续组内师弟师妹们对本文档进行持续补充
+
+# 学习
+## Linux学习
+- Linux是本组学习和科研的基本工具，必须掌握
+- 实验室服务器均为CentOS7系统，学习也以CentOS7为重
+- 个人计算机可以使用Ubuntu
+
+### 入门
+- 《快乐的Linux命令行》：本书更适合作为Linux入门学习
+- 《鸟哥的Linux私房菜》：
+  - 本书较厚，可以用作参考手册，有时间可以通读
+  - 上册为基本操作，下册为服务器搭建指南
+- 我的学习笔记
+  - https://github.com/yifans/Notes/tree/master/Linux/Linux_itercast
+  - 这是我2013年学习时的笔记，对应的视频课程已经找不到了
+  - 该笔记是基于CentOS6的，学习时注意与CentOS7区分
+- 《Linux Shell脚本攻略》https://book.douban.com/subject/6889456/
+
+### 开发
+- 《UNIX环境高级编程》
+- 《Linux程序设计 : 第4版》
+- 《Advance Bash-Scripting Guide》 Shell编程最权威的书，有开源版本
+
+### 其它
+- 科大LUG协会：https://lug.ustc.edu.cn/wiki/
+- 科大镜像：可以下载各种Linux发行版的镜像文件
+  - mirrors.ustc.edu.cn
+
+# 科研
+## EPICS
+- EPICS是本组工作的基础
+- EPICS资料基本都是英文，中文资料都不靠谱（中文与EPICS相关的毕业论文和期刊论文可以做参考）
+- EPICS官网：https://epics.anl.gov/，下面对左侧每一栏内容做一解释
+  - Home 本网站内容概览
+  - News：各个版本发布的Release Note
+    * Meetings 每年两次的 EPICS Collaboration Meetings，进入每个会议的链接可以找到会议报告PPT，从中可以知道EPICS社区的最新动向，从中可以得到启发
+    * Codeathons 不知道是啥
+  - About EPICS 自身介绍
+    * Council EPICS组委会，可以看到国际上主要使用和开发EPICS的呻吟声
+    * Contact EPICS各个部分遇到问题该找谁，更优先的tech-talk中提问
+    * 10 Things EPICS优势
+  - Base EPICS核心 版本信息
+    * EPICS7 可以下载
+    * EPICS R3.15 文档较为全面，主要有
+      - EPICS Application Developer's Guide EPICS开发资料
+      - EPICS R3.15 Channel Access Reference Manual CA协议的手册
+      - Channel Access Protocol Specification CA协议说明
+    * EPICS R3.14.12
+      - Record Reference Manual 各个记录的说明（非常重要）
+  - Modules 各个驱动程序的下载地址
+  - Extensions
+    * 包括了CA客户端和服务端软件和各种编程语言接口
+    * 使用比较多的有：
+      - Archiver Appliance
+      - StripTool 画图
+      - Gateway
+      - pvaPy 和 PyEpics3， Python接口
+      - VDCT
+      - procServ 后台运行程序
+      - RecSync
+      - WiresharkCA
+  - Distributions epics各种发行版
+  - Downloads 各个部分
+  - Search 没啥用
+  - EPICS V4 新版本EPICS
+  - IRMIS 我们没有用
+  - Talk EPICS邮件列表，十分重要，找资料，找工作
+    * Tech-Talk 技术讨论
+    * Core-Talk 内核开发讨论
+    * 后两个已经失效
+  - Bugs 提交bug
+  - Documents
+    * wiki 这部分资料注意时效
+    *  CA 旧文档
+    *  Training（十分重要），EPICS历次培训班资料
+    *  Logo 各个大小的logo
+- 学习途径
+  - 一定在Linux上学习
+  - 安装EPICS，可以参考组内安装手册
+  - 看Training上的ppt，可以先看 APS EPICS Training, 2014 中的 Introduction to EPICS来入门
+  - 做ioc开发：看Record Reference Manual
+  - 做驱动开发：EPICS Application Developer's Guide
+  - 做上层应用开发，需要接口：看Extensions
+  - 遇到问题：找tech-talk的历史邮件或直接提问
+  - 找课题灵感：看Collaboration Meetings
+
+## 找文献
+- jacow：加速器各个会议文章汇总：http://www.jacow.org/，也可看到将要召开的会议时间和地点
+  - IPAC 加速器会议
+  - ICALEPCS：控制会议
+  - PCaPAC：控制workshop
+- cnki 中国知网
+- 万方：查找学位文章：http://www.wanfangdata.com.cn/index.html
+- google 学术
+- Web of Science https://www.webofknowledge.com/ 查sci文章
+
+## 投文章
+### 会议文章
+- IPAC：投递时要选择审稿
+- ICALEPCS
+- PCaPAC
+- 以上都要注意摘要提交时间，一般为为开会的前半年
+### 期刊文章
+- SCI
+  - NIM-a
+  - ieee transactions on nuclear science
+  - 核技术(英文版) 
+- EI和中文核心
+  - 审稿的ipac
+  - 原子能科学技术
+  - 核电子学与探测技术
+  - 强激光与粒子束
+
+
+# 生活
+## NSRL生活
+- 找老师和保修的通讯录：http://www.nsrl.ustc.edu.cn/10902/list.htm
+- 师资队伍索引：http://www.nsrl.ustc.edu.cn/10920/list.htm
+## USTC生活
+- 中国科大网络资源一览：https://github.com/zzh1996/USTC-Network-Resources
+  * 本链接值得详细看，认真看，仔细参考
+  * 正版软件，可以下载windows、office、matlab等：ms.ustc.edu.cn
+
+
+
+
+
+
+
